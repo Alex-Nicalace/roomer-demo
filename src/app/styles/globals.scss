@@ -1,0 +1,16 @@
+@use './base/reset';
+@use './variables/themes/light';
+@use './variables/themes/dark';
+
+/* Класс для визуального скрытия, но доступности */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
