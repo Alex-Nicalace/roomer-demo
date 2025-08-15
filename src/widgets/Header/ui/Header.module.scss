@@ -1,0 +1,12 @@
+.header {
+  padding: rem(8) rem(3) rem(8) rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-header);
+}
+
+.content {
+  font-size: rem(28);
+  line-height: 1.21;
+}
