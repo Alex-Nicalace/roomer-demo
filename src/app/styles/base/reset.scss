@@ -1,4 +1,6 @@
+@use 'sass:math';
 @use '../variables/variables' as *;
+@use '../tools/functions.scss' as *;
 
 *,
 *:before,
@@ -20,6 +22,10 @@ body {
 }
 
 body {
+  max-width: rem($maxWidthContainer);
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 rem(math.div($containerPadding, 2));
   scroll-behavior: smooth;
   line-height: 1;
   color: var(--color-main-text);
