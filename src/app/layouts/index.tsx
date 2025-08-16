@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { sfProFont } from 'app/fonts';
+import { sfProFont } from 'shared/config/fonts';
 
 import '../styles/globals.scss';
 
