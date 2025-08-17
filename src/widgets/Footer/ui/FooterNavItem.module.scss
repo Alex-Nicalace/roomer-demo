@@ -1,0 +1,9 @@
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  fill: var(--color-acive-nav-link);
+}
