@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  padding: rem(16) rem(20);
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  transition: filter 0.3s ease;
+  line-height: 1.27;
+  font-size: rem(22);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  &:hover {
+    filter: brightness(0.8); // Затемнение на 20%
+  }
+
+  &:active {
+    filter: brightness(0.7); // Еще большее затемнение
+  }
+}
+
+.background {
+  border: none;
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+
+.outline {
+  border: rem(4) solid var(--color-button);
+  background-color: transparent;
+  color: var(--color-button);
+}
