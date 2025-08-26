@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { Button, ButtonTheme } from 'shared/ui/Button';
+
 import styles from './NotFound.module.scss';
 
 export default function NotFound() {
@@ -8,9 +9,9 @@ export default function NotFound() {
       <p className={styles.description}>
         К сожалению, запрашиваемая вами страница не существует
       </p>
-      <Link href="/" className={styles.link}>
+      <Button href="/" theme={ButtonTheme.OUTLINE}>
         Вернуться на главную
-      </Link>
+      </Button>
     </main>
   );
 }
