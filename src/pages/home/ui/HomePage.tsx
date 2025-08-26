@@ -1,3 +1,4 @@
+import { Button } from 'shared/ui/Button';
 import { Header } from 'widgets/Header';
 
 export default function HomePage(/*{ }: HomePageProps*/) {
@@ -6,7 +7,9 @@ export default function HomePage(/*{ }: HomePageProps*/) {
       <Header>
         <h1>Главная</h1>
       </Header>
-      <main>HomePage</main>
+      <main>
+        <Button href="/profile">Перейти в профиль</Button>
+      </main>
     </>
   );
 }
