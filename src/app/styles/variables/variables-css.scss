@@ -1,0 +1,6 @@
+@use '../tools/functions' as *;
+
+// css variables
+:root {
+  --border-radius: #{rem(25)};
+}

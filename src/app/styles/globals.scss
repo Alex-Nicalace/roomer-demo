@@ -2,6 +2,7 @@
 @use './base/reset';
 @use './variables/themes/light';
 @use './variables/themes/dark';
+@use './variables/variables-css';
 
 body {
   display: flex;
