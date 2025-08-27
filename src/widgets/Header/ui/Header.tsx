@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import { BurgerButton } from 'features/BurgerButton';
+import { BurgerButton } from 'features/toggle-burger';
 
 import styles from './Header.module.scss';
 
