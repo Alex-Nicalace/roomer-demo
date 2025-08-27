@@ -1,10 +1,5 @@
 import clsx from 'clsx';
-import Link, { LinkProps } from 'next/link';
-import {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-} from 'react';
+import { ButtonOrLink, ButtonOrLinkProps } from './ButtonOrLink';
 
 import styles from './Button.module.scss';
 
@@ -13,29 +8,19 @@ export enum ButtonTheme {
   BACKGROUND = 'background',
 }
 
-type NativeButtonProps = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> & {
-  href?: never;
-};
-
-type AnchorProps = LinkProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps>;
-
-type ButtonProps = (AnchorProps | NativeButtonProps) & {
+type ButtonProps = ButtonOrLinkProps & {
   theme?: ButtonTheme;
 };
-export function Button({
+
+export default function Button({
   className,
   theme = ButtonTheme.BACKGROUND,
   ...props
 }: ButtonProps) {
-  const classes = clsx(styles.button, className, styles[theme]);
-
-  if (props.href !== undefined) {
-    return <Link {...props} className={classes} />;
-  }
-
-  return <button {...props} className={classes} />;
+  return (
+    <ButtonOrLink
+      {...props}
+      className={clsx(styles.button, className, styles[theme])}
+    />
+  );
 }
