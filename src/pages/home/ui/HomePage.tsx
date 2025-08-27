@@ -1,4 +1,4 @@
-import { Button } from 'shared/ui/Button';
+import { Button } from 'shared/ui/button';
 import { Header } from 'widgets/Header';
 
 export default function HomePage(/*{ }: HomePageProps*/) {

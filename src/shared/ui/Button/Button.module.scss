@@ -1,14 +1,17 @@
 .button {
   display: inline-block;
-  padding: rem(16) rem(20);
   border-radius: var(--border-radius);
   text-transform: uppercase;
   transition: filter 0.3s ease;
-  line-height: 1.27;
-  font-size: rem(22);
-  font-weight: 700;
   text-align: center;
-  letter-spacing: -0.01em;
+
+  &:is(.background, .outline) {
+    padding: rem(16) rem(20);
+    line-height: 1.27;
+    font-size: rem(22);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
 
   &:hover {
     filter: brightness(0.8); // Затемнение на 20%
@@ -29,4 +32,16 @@
   border: rem(4) solid var(--color-button);
   background-color: transparent;
   color: var(--color-button);
+}
+
+.iconOutline {
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(3);
+  padding: rem(15) rem(13);
+  border: rem(3) solid #a7a7a7;
+  font-weight: 590;
+  line-height: 1.31;
+  letter-spacing: -0.02em;
+  color: var(--color-icon);
 }

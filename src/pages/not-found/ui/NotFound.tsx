@@ -1,4 +1,4 @@
-import { Button, ButtonTheme } from 'shared/ui/Button';
+import { Button, ButtonTheme } from 'shared/ui/button';
 
 import styles from './NotFound.module.scss';
 
