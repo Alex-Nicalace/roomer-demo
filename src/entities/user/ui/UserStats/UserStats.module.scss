@@ -1,0 +1,11 @@
+.UserStats {
+  display: flex;
+
+  & > * {
+    flex: 1;
+
+    &:not(:last-child) {
+      border-right: 1px solid currentColor;
+    }
+  }
+}

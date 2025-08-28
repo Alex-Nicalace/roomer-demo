@@ -1,0 +1,17 @@
+.UserItemStats {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--color-text-secondary);
+}
+
+.topString {
+  font-weight: 700;
+  font-size: rem(24);
+}
+
+.bottomString {
+  font-size: rem(18);
+}

@@ -10,9 +10,9 @@ export default function UserName({ className }: UserNameProps) {
   const role = 'румер';
   const fullName = 'Ваня Петькин';
   return (
-    <div className={clsx(styles.userName, className)}>
+    <p className={clsx(styles.userName, className)}>
       <span className={styles.role}>{`${role}: `}</span>
       <span className={styles.fullName}>{fullName}</span>
-    </div>
+    </p>
   );
 }
