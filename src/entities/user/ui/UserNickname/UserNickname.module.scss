@@ -1,0 +1,12 @@
+.UserNickname {
+  display: flex;
+  font-size: rem(17);
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: var(--color-text-secondary);
+
+  & > * {
+    flex: 0 0 50%;
+  }
+}
