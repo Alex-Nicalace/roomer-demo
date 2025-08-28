@@ -14,16 +14,20 @@ function getRoleLetter(role: string) {
 
 type UserAvatarProps = {
   className?: string;
-  imageUrl: string;
-  userRole: string;
+  // imageUrl: string;
+  // userRole: string;
   alt?: string;
 };
 export default function UserAvatar({
   className,
-  imageUrl,
-  userRole,
+  // imageUrl,
+  // userRole,
   alt = 'Аватар пользователя',
 }: UserAvatarProps) {
+  //TODO: Сделать получение из хранилища
+  const userRole = 'румер'; // Пример роли пользователя
+  const imageUrl = '/img/avatar.jpg'; // Пример URL изображения
+
   return (
     <figure className={clsx(styles.avatar, className)}>
       <Image
