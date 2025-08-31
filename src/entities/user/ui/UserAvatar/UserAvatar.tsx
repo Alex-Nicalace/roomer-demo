@@ -1,16 +1,9 @@
-import Image from 'next/image';
 import clsx from 'clsx';
+import Image from 'next/image';
+
+import { getRoleLetter } from '../../lib';
 
 import styles from './UserAvatar.module.scss';
-
-// Функция для получения буквы по роли
-function getRoleLetter(role: string) {
-  const roleMap: Record<string, string> = {
-    румер: 'Р',
-  };
-
-  return roleMap[role.toLowerCase()] || '?';
-}
 
 type UserAvatarProps = {
   className?: string;

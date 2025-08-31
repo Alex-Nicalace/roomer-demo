@@ -1,0 +1,1 @@
+export { getRoleLetter } from './getRoleLetter';
