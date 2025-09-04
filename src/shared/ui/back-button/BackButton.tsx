@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { IconButton } from '../button';
+import { IconButton } from 'shared/ui/button';
 
 type BackButtonProps = {
   className?: string;
