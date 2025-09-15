@@ -14,6 +14,7 @@ export default function BackButton({ className }: BackButtonProps) {
       className={className}
       iconName="leftArrow"
       onClick={() => router.back()}
+      aria-label="Go back"
     />
   );
 }
