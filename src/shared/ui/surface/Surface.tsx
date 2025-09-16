@@ -2,19 +2,21 @@ import { createElement, JSX } from 'react';
 import styles from './Surface.module.scss';
 import clsx from 'clsx';
 
-export type SurfaceProps<T extends keyof JSX.IntrinsicElements = 'div'> = {
-  children: React.ReactNode;
-  tag?: T; // Ограничение по ключам JSX.IntrinsicElements
-} & JSX.IntrinsicElements[T]; // Атрибуты соответствующего элемента
+type Tags = keyof JSX.IntrinsicElements;
 
-export default function Surface({
-  tag = 'div',
+export type SurfaceProps<T extends Tags = 'div'> = {
+  tag?: T;
+} & JSX.IntrinsicElements[T];
+
+export default function Surface<T extends Tags = 'div'>({
+  tag,
   className,
   children,
   ...props
-}: SurfaceProps) {
+}: SurfaceProps<T>) {
+  const tagName = tag ?? 'div';
   return createElement(
-    tag,
+    tagName,
     {
       ...props,
       className: clsx(styles.Surface, className),
