@@ -56,4 +56,16 @@ export default defineConfig({
       },
     ],
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'), // 'src' как '@'
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/app/styles/module-tools.scss" as *;`,
+      },
+    },
+  },
 });
