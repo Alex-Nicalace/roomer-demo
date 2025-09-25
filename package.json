@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test:unit": "vitest --project unit",
-    "test:unit:storybook": "vitest",
     "test:storybook": "vitest --project storybook",
+    "test:unit:storybook": "vitest",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },

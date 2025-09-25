@@ -4,35 +4,35 @@ import styles from './Icon.module.scss';
 
 describe('Icon', () => {
   test('renders SVG', () => {
-    render(<Icon name="avatar" />);
-    expect(screen.getByTestId('mocked-svg')).toBeInTheDocument();
+    const { container } = render(<Icon name="avatar" />);
+    expect(container.querySelector('svg')).toBeInTheDocument();
   });
 
   test('applies className when provided', () => {
     const className = 'class-test';
-    render(<Icon name="avatar" className={className} />);
-    expect(screen.getByTestId('mocked-svg')).toHaveClass(className);
+    const { container } = render(<Icon name="avatar" className={className} />);
+    expect(container.querySelector('svg')).toHaveClass(className);
   });
 
   test('applies default color class when no color provided', () => {
     const colorDefault = 'regular';
-    render(<Icon name="avatar" />);
-    expect(screen.getByTestId('mocked-svg')).toHaveClass(
+    const { container } = render(<Icon name="avatar" />);
+    expect(container.querySelector('svg')).toHaveClass(
       styles[`${colorDefault}Color`]
     );
   });
 
   test('applies specific color class', () => {
     const color = 'active';
-    render(<Icon name="avatar" color={color} />);
-    expect(screen.getByTestId('mocked-svg')).toHaveClass(
-      styles[`${color}Color`]
-    );
+    const { container } = render(<Icon name="avatar" color={color} />);
+    expect(container.querySelector('svg')).toHaveClass(styles[`${color}Color`]);
   });
 
   test('passes through SVG props', () => {
-    render(<Icon name="avatar" width="24" height="24" data-test="custom" />);
-    const svg = screen.getByTestId('mocked-svg');
+    const { container } = render(
+      <Icon name="avatar" width="24" height="24" data-test="custom" />
+    );
+    const svg = container.querySelector('svg');
 
     expect(svg).toHaveAttribute('width', '24');
     expect(svg).toHaveAttribute('height', '24');

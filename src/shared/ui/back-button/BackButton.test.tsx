@@ -9,9 +9,9 @@ vi.mock('next/navigation', () => ({
 
 describe('BackButton', () => {
   test('renders button with icon', () => {
-    render(<BackButton />);
+    const { container } = render(<BackButton />);
     expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByTestId('mocked-svg')).toBeInTheDocument();
+    expect(container.querySelector('svg')).toBeInTheDocument();
   });
 
   test('applies className when provided', () => {

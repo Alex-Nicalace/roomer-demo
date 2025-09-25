@@ -30,16 +30,16 @@ describe('Button', () => {
   });
 
   test('renders button when provided prop withIcon', () => {
-    render(<Button withIcon="gear" />);
+    const { container } = render(<Button withIcon="gear" />);
     expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByTestId('mocked-svg')).toBeInTheDocument();
+    expect(container.querySelector('svg')).toBeInTheDocument();
   });
 
   test('renders button when provided prop withIcon and label', () => {
     const buttonText = 'Click me';
-    render(<Button withIcon="gear">{buttonText}</Button>);
+    const { container } = render(<Button withIcon="gear">{buttonText}</Button>);
     expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByTestId('mocked-svg')).toBeInTheDocument();
+    expect(container.querySelector('svg')).toBeInTheDocument();
     expect(screen.getByText(buttonText)).toBeInTheDocument();
   });
 
