@@ -1,0 +1,14 @@
+.Badge {
+  padding: 0 rem(5);
+  min-width: rem(28);
+  min-height: rem(28);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color-badge-bg);
+  font-weight: 700;
+  font-size: rem(22);
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+}
