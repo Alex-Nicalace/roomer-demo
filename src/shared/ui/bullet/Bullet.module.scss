@@ -1,0 +1,22 @@
+.Bullet {
+  width: rem(13);
+  height: rem(13);
+  border-radius: 50%;
+}
+
+.primary {
+  background-color: var(--color-bullet-primary);
+}
+
+.secondary {
+  background-color: var(--color-bullet-secondary);
+}
+
+.tertiary {
+  background-color: var(--color-bullet-tertiary);
+}
+
+.small {
+  width: rem(10);
+  height: rem(10);
+}
