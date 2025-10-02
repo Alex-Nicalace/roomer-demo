@@ -1,0 +1,29 @@
+.Accordion {
+  overflow: hidden;
+}
+
+.summaryWrap {
+  display: flex;
+  align-items: center;
+  column-gap: rem(20);
+
+  list-style-type: none; // это работает
+  &::-webkit-details-marker {
+    display: none; // у меня это не срабатывало
+  }
+}
+
+.summary {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.icon {
+  // transform: rotate(-90deg);
+  // transition: transform 0.3s ease;
+}
+
+.content {
+  // transition: all 0.3s ease 0s;
+  // transition: height 5s ease;
+}
