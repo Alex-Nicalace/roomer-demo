@@ -1,0 +1,16 @@
+.AccordionSummary {
+  display: flex;
+  align-items: center;
+  column-gap: rem(18);
+}
+
+.label {
+  flex-grow: 1;
+
+  font-weight: 590;
+  font-size: rem(20);
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
