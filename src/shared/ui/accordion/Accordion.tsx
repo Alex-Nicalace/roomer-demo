@@ -144,7 +144,7 @@ export default function Accordion({
         onClick={handleClick}
       >
         <div className={styles.summary}>{summary}</div>
-        <Icon className={styles.icon} name="leftArrow" />
+        <Icon className={styles.icon} name="downArrow" />
       </summary>
       <div ref={contentRef} className={styles.content}>
         {children}
