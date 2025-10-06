@@ -1,1 +1,1 @@
-export { default as Bullet } from './Bullet';
+export { default as Bullet, type BulletColor } from './Bullet';

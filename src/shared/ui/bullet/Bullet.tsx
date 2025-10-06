@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './Bullet.module.scss';
 
-type BulletColor = 'primary' | 'secondary' | 'tertiary';
+export type BulletColor = 'primary' | 'secondary' | 'tertiary';
 
 type IndicatorProps = {
   className?: string;
@@ -14,7 +14,7 @@ export default function Bullet({
   isSmall = false,
 }: IndicatorProps) {
   return (
-    <div
+    <span
       className={clsx(
         styles.Bullet,
         styles[color],
@@ -22,6 +22,6 @@ export default function Bullet({
         className
       )}
       data-testid="bullet"
-    ></div>
+    />
   );
 }
