@@ -8,6 +8,7 @@ import ShareIcon from 'shared/assets/icons/share.svg';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import GearIcon from 'shared/assets/icons/gear.svg';
 import LeftArrowIcon from 'shared/assets/icons/left-arrow.svg';
+import DownArrowIcon from 'shared/assets/icons/down-arrow.svg';
 
 export const iconMap = {
   avatar: AvatarIcon,
@@ -20,6 +21,7 @@ export const iconMap = {
   eye: EyeIcon,
   gear: GearIcon,
   leftArrow: LeftArrowIcon,
+  downArrow: DownArrowIcon,
 };
 
 export type IconName = keyof typeof iconMap;
