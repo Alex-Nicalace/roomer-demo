@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   column-gap: rem(20);
+  cursor: pointer;
 
   list-style-type: none; // это работает
   &::-webkit-details-marker {
@@ -22,7 +23,6 @@
 
 .summary {
   flex-grow: 1;
-  cursor: pointer;
   font-weight: 590;
   font-size: rem(20);
   line-height: 125%;
