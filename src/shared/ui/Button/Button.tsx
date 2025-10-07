@@ -9,6 +9,7 @@ export enum ButtonTheme {
   OUTLINE = 'outline',
   BACKGROUND = 'background',
   ICON_OUTLINE = 'iconOutline',
+  ICON_CLEAR = 'iconClear',
 }
 
 type ButtonProps = ButtonOrLinkProps & {
@@ -28,7 +29,11 @@ export default function Button({
       {...props}
       className={clsx(styles.button, className, styles[theme])}
     >
-      {withIcon && <Icon name={withIcon} className={styles.icon} />}
+      {withIcon && (
+        <span className={styles.icon}>
+          <Icon name={withIcon} />
+        </span>
+      )}
       {children}
     </ButtonOrLink>
   );

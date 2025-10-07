@@ -34,6 +34,12 @@
   color: var(--color-button);
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .iconOutline {
   display: inline-flex;
   align-items: center;
@@ -44,4 +50,19 @@
   line-height: 1.31;
   letter-spacing: -0.02em;
   color: var(--color-icon);
+}
+
+.iconClear {
+  padding: rem(15) rem(8);
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(10);
+  text-transform: none;
+  font-size: rem(20);
+  line-height: 125%;
+  letter-spacing: -0.02em;
+
+  .icon {
+    min-width: rem(36);
+  }
 }
