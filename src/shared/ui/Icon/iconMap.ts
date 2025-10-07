@@ -7,8 +7,14 @@ import CatIcon from 'shared/assets/icons/cat.svg';
 import ShareIcon from 'shared/assets/icons/share.svg';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import GearIcon from 'shared/assets/icons/gear.svg';
-import LeftArrowIcon from 'shared/assets/icons/left-arrow.svg';
 import DownArrowIcon from 'shared/assets/icons/down-arrow.svg';
+import LeftArrowIcon from 'shared/assets/icons/left-arrow.svg';
+import BookmarksIcon from 'shared/assets/icons/bookmarks.svg';
+import CheckMarkIcon from 'shared/assets/icons/check-mark.svg';
+import CloseIcon from 'shared/assets/icons/close.svg';
+import EyelashesIcon from 'shared/assets/icons/eyelashes.svg';
+import HistoryIcon from 'shared/assets/icons/history.svg';
+import LinesIcon from 'shared/assets/icons/lines.svg';
 
 export const iconMap = {
   avatar: AvatarIcon,
@@ -22,6 +28,12 @@ export const iconMap = {
   gear: GearIcon,
   leftArrow: LeftArrowIcon,
   downArrow: DownArrowIcon,
+  bookmarks: BookmarksIcon,
+  checkMark: CheckMarkIcon,
+  close: CloseIcon,
+  eyelashes: EyelashesIcon,
+  history: HistoryIcon,
+  lines: LinesIcon,
 };
 
 export type IconName = keyof typeof iconMap;
