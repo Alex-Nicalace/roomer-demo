@@ -13,7 +13,7 @@ export default function EditProfile({ className }: EditProfileProps) {
     <Button
       className={clsx(styles.EditProfile, className)}
       withIcon="gear"
-      theme={ButtonTheme.ICON_OUTLINE}
+      theme={ButtonTheme.OUTLINE}
     >
       редакт
     </Button>

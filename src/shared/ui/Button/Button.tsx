@@ -1,20 +1,23 @@
 import clsx from 'clsx';
 
 import { Icon, IconName } from 'shared/ui/Icon';
-import { ButtonOrLink, ButtonOrLinkProps } from './ButtonOrLink';
+import { Bullet } from 'shared/ui/bullet';
 
 import styles from './Button.module.scss';
+import { ButtonOrLink, ButtonOrLinkProps } from './ButtonOrLink';
 
 export enum ButtonTheme {
   OUTLINE = 'outline',
   BACKGROUND = 'background',
-  ICON_OUTLINE = 'iconOutline',
-  ICON_CLEAR = 'iconClear',
+  CLEAR = 'clear',
 }
+
+export type ButtonIcon = IconName | 'bullet';
 
 type ButtonProps = ButtonOrLinkProps & {
   theme?: ButtonTheme;
-  withIcon?: IconName;
+  withIcon?: ButtonIcon;
+  fullWidth?: boolean;
 };
 
 export default function Button({
@@ -22,17 +25,23 @@ export default function Button({
   withIcon,
   children,
   theme = ButtonTheme.BACKGROUND,
+  fullWidth,
   ...props
 }: ButtonProps) {
   return (
     <ButtonOrLink
       {...props}
-      className={clsx(styles.button, className, styles[theme])}
+      className={clsx(styles.button, className, styles[theme], {
+        [styles.fullWidth]: fullWidth,
+      })}
     >
-      {withIcon && (
+      {withIcon && withIcon !== 'bullet' && (
         <span className={styles.icon}>
           <Icon name={withIcon} />
         </span>
+      )}
+      {withIcon === 'bullet' && (
+        <Bullet className={styles.bullet} isSmall color="tertiary" />
       )}
       {children}
     </ButtonOrLink>
