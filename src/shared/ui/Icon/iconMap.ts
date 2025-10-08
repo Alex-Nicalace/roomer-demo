@@ -15,6 +15,7 @@ import CloseIcon from 'shared/assets/icons/close.svg';
 import EyelashesIcon from 'shared/assets/icons/eyelashes.svg';
 import HistoryIcon from 'shared/assets/icons/history.svg';
 import LinesIcon from 'shared/assets/icons/lines.svg';
+import LogoutIcon from 'shared/assets/icons/logout.svg';
 
 export const iconMap = {
   avatar: AvatarIcon,
@@ -34,6 +35,7 @@ export const iconMap = {
   eyelashes: EyelashesIcon,
   history: HistoryIcon,
   lines: LinesIcon,
+  logout: LogoutIcon,
 };
 
 export type IconName = keyof typeof iconMap;
