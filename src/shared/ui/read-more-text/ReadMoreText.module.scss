@@ -1,0 +1,23 @@
+.ReadMoreText {
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--lines-visible);
+  -webkit-box-orient: vertical;
+  line-clamp: var(--lines-visible);
+  overflow: hidden;
+  text-align: justify;
+
+  &.expanded {
+    .button {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.button {
+  position: absolute;
+  bottom: rem(0);
+  right: 0;
+  transform-origin: 0 0;
+  transition: transform 0.3s ease;
+}
