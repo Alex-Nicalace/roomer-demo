@@ -1,4 +1,5 @@
 import {
+  UserAbout,
   UserAvatar,
   UserCity,
   UserName,
@@ -9,9 +10,14 @@ import { EditProfile } from 'features/edit-profile';
 import { ShareProfile } from 'features/share-profile';
 import { ShowLinkedAccount } from 'features/show-linked-account';
 import { ToggleVisibilityUser } from 'features/toggle-visibility-user';
-import { Accordion } from 'shared/ui/accordion';
 import { BackButton } from 'shared/ui/back-button';
+import { Button, ButtonTheme } from 'shared/ui/button';
+import { Surface } from 'shared/ui/surface';
+import { GamesPanel } from 'widgets/games-panel';
 import { Header } from 'widgets/header';
+import { profileMenu } from '../config';
+import { ProfileAccordions } from './ProfileAccordions';
+import styles from './ProfilePage.module.scss';
 
 // type pageProps = { }
 export default async function ProfilePage(/*{ }: pageProps*/) {
@@ -28,28 +34,42 @@ export default async function ProfilePage(/*{ }: pageProps*/) {
       <Header>
         <h1>Профиль</h1>
       </Header>
-      <main>
-        <BackButton />
-        <UserAvatar />
+      <main className={styles.wrapPage}>
         <div>
-          <ShareProfile />
-          <ToggleVisibilityUser />
-          <ShowLinkedAccount />
+          <div className={styles.profileHeader}>
+            <BackButton className={styles.backButton} />
+            <UserAvatar />
+            <div className={styles.profileHeaderActions}>
+              <ShareProfile />
+              <ToggleVisibilityUser />
+              <ShowLinkedAccount />
+            </div>
+          </div>
+          <UserName className={styles.userName} />
+          <UserNickname className={styles.userNickname} />
         </div>
-        <UserName />
-        <UserNickname />
         <UserStats />
-        <UserCity />
-        <EditProfile />
-        <Accordion summary="Настройки">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum mollitia
-          et itaque necessitatibus autem repudiandae, velit beatae animi sit
-          totam molestiae iure accusantium, illum vel culpa accusamus ex iusto
-          suscipit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Cum mollitia et itaque necessitatibus autem repudiandae, velit beatae
-          animi sit totam molestiae iure accusantium, illum vel culpa accusamus
-          ex iusto suscipit.
-        </Accordion>
+        <div className={styles.wrapEdit}>
+          <UserCity className={styles.userCity} />
+          <EditProfile />
+        </div>
+        <ProfileAccordions />
+        <GamesPanel />
+        <UserAbout />
+        {profileMenu.map((item) => (
+          <Surface key={item[0].id} theme="list">
+            {item.map((item) => (
+              <Button
+                key={item.id}
+                theme={ButtonTheme.CLEAR}
+                withIcon={item.iconName}
+                fullWidth
+              >
+                {item.label}
+              </Button>
+            ))}
+          </Surface>
+        ))}
       </main>
     </>
   );

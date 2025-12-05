@@ -1,0 +1,35 @@
+.wrapPage {
+  padding-block: rem(50);
+
+  & > *:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+}
+.profileHeader {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: rem(10);
+}
+.profileHeaderActions {
+  padding-right: rem(15);
+  display: grid;
+  row-gap: rem(15);
+  justify-self: end;
+}
+
+.backButton {
+  justify-self: start;
+}
+
+.userName {
+  padding-block: rem(10);
+}
+
+.wrapEdit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userCity {
+  flex-basis: percent(220, 355);
+}
