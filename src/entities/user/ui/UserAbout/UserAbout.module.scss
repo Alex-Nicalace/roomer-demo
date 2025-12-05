@@ -1,0 +1,23 @@
+.UserAbout {
+  padding: rem(15);
+}
+
+.readMore {
+  &:not(:last-child) {
+    margin-bottom: rem(15);
+  }
+}
+
+.telega {
+  padding-block: rem(15);
+  display: flex;
+  justify-content: space-between;
+  border-top: rem(1) solid rgba(0, 0, 0, 0.2);
+  font-style: normal;
+  font-size: rem(17);
+  line-height: 1.29;
+}
+
+.linkTelega {
+  font-weight: 600;
+}
